@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meridian Orbit: Work in Orbit</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<div class="head"><div><h1>Meridian Orbit</h1><p>Work moves inward. Every issue orbits a company’s core, and the closer it gets, the closer it is to shipped.</p></div><div class="tabs" id="tabs"></div></div>
+<div class="grid">
+<div id="gl"><div class="leg" id="leg"></div></div>
+<div class="side">
+<div class="box"><div class="stats"><div class="stat"><b id="sI">0</b><span>Issues</span></div><div class="stat"><b id="sD">0%</b><span>Shipped</span></div><div class="stat"><b id="sP">-</b><span>Plan</span></div></div></div>
+<div class="box sel" id="sel"></div>
+<div class="box"><div class="add"><input id="title" placeholder="Describe a new issue" maxlength="80" aria-label="New issue title"><select id="type" aria-label="Type"><option value="feat">Feature</option><option value="bug">Bug</option><option value="task">Task</option></select><select id="prio" aria-label="Priority"><option value="medium">Medium</option><option value="high">High</option><option value="low">Low</option></select><button class="pri" type="button" data-a="add">Add issue</button></div><div id="msg" role="status"></div></div>
+<div class="box ring" id="rings"></div>
+</div></div>
+<p class="note">Drag the scene to rotate it. Select an orb or a list row to open the issue. Data saves in this browser only; the full project stores it in PostgreSQL with a workspace_id on every row.</p>
+<button type="button" data-a="reset" style="margin-top:8px">Reset demo data</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
